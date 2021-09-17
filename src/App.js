@@ -12,9 +12,14 @@ function App() {
         {id:'e4',title:'Desktop',amount:97.12,date:new Date(2020,10,14)},
     ];
 
+    const addExpenseHandler = expense => {
+        console.log('In App.js');
+        console.log(expense);
+    }
+
     return (
         <div>
-            <NewExpense/>
+            <NewExpense onAddExpense={addExpenseHandler}/>
             <Expenses items={expenses}/>
         </div>
     )
