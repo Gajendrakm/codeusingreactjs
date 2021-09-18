@@ -6,11 +6,11 @@ import './NewExpense.css'
 const NewExpense = () => {
     const saveExpenseDataHandler = (enteredExpenseData) => {
         const expenseData = {
-            ...eneteredExpenseData,
+            ...enteredExpenseData,
             id: Math.random().toString()
         };
         //console.log(expenseData) 
-        props.onAddExpense()
+       // props.onAddExpense()
     }
     return (
     <div className="new-expense">
