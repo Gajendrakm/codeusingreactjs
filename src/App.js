@@ -21,8 +21,6 @@ const App = () => {
         setExpenses((prevExpenses) => {
             return [expense, ...prevExpenses];
         })
-        // console.log('In App.js');
-        // console.log(expense);
     }
 
     return (

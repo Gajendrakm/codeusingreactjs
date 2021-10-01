@@ -9,7 +9,7 @@ const NewExpense = (props) => {
             ...enteredExpenseData,
             id: Math.random().toString()
         };
-        //console.log(expenseData) 
+
       props.onAddExpense(expenseData)
     }
     return (
@@ -20,26 +20,3 @@ const NewExpense = (props) => {
 };
 
 export default NewExpense;
-/*{
-    const [useInput, setUserInput] = useState({
-        enteredTitle:'';
-        enteredAmount:'',
-        enteredDate:''
-    });
-
-    const titleChangeHandler = (event) => {
-        setUserInput({
-            enteredTitle: event.target.value,
-        })
-        or
-        setUserInput({
-            ...userInput,
-            enteredTitle: event.target.value,
-        })
-        or
-        setUserInput((prevState) => {
-            return { ...prevState,enteredTitle: event.target.value}
-        });
-    }
-
-}*/
