@@ -46,11 +46,11 @@ const ExpenseForm = (props) => {
         const expenseData = {
             title: enteredTitle,
             amount: enteredAmount,
-            data: new Date(enteredDate)
+            date: new Date(enteredDate),
         };
 
         //console.log(expenseData);
-        props.onSaveExpenseData();
+        props.onSaveExpenseData(expenseData);
         setEnteredTitle('');
         setEnteredAmount('');
         setEnteredDate('');
@@ -63,7 +63,7 @@ const ExpenseForm = (props) => {
                     <label>Title</label>
                     <input 
                         type='text'
-          //              value={enteredTitle}
+                       value={enteredTitle}
                         onChange={titleChangeHandler}/>
                 </div>
             </div>
@@ -74,7 +74,7 @@ const ExpenseForm = (props) => {
                         type='number' 
                         min="0.01" 
                         step="0.01" 
-            //            value={enteredAmount}
+                       value={enteredAmount}
                         onChange={amountChangeHandler}/>
                 </div>
             </div>
@@ -85,7 +85,7 @@ const ExpenseForm = (props) => {
                     type='date' 
                     min="2019-01-01" 
                     max="2022-12-31" 
-              //      value={enteredDate}
+                    value={enteredDate}
                     onChange={dateChangeHandler}/>
                 </div>
             </div>
